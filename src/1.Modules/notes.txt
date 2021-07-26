@@ -1,0 +1,7 @@
+if file contains atleast one top level import or export is called module
+each module is executed in its own scope.
+the variables which are not exported , will not visible in other modules. means we can't import them
+in other files.
+
+
+each file(module) should have only one default export.
