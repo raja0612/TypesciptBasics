@@ -1,0 +1,76 @@
+compile ts file
+
+npx tsc filename
+
+
+configure type script
+
+npm i -D typescript
+
+npx tsc --init
+this will generate tsconfig.json file with default ts compiler options.
+
+
+package.json
+add "build": "tsc" under scripts section
+
+when you run npm run build , it will fetch the configurations from tsconfig.json
+and compile ts files
+
+
+run ts compiler in watch mode
+npx tsc -w 
+
+nodemon
+it is used to run js files.
+
+npm i -D nodemon
+
+npx nodemon js file
+
+by default nodemon runs in watch mode
+
+to specify which folder should watch
+
+npx nodemon -w foldername
+
+npx nodemon -w dist dist/index.js
+
+run nodemon in quite mode
+npx nodemon -w dist -q dist/index.js
+
+
+run ts compiler and nodemon in watch mode in concurrently
+
+
+npm i -D concurrently
+
+
+npx concurrently "tsc -w" "nodemon -w dist -q dist/index.js"
+
+
+npx concurrently -n COMPILER, NODEMON -c yellow, blue "tsc -w" "nodemon -w dist -q dist/index.js"
+
+both tsc and nodemon run concurrently, if anyone fails, we should terminate both process
+so we use below commannd -k
+
+
+
+ "dev": "concurrently -k -n COMPILER,NODEMON -c yellow,blue \"tsc -w\" \"nodemon -w dist -q dist/index.js\""
+
+ -k - kill if tsc or nodemon fails
+
+ -n - names of processes
+
+ -c - colors of process on console
+
+
+
+
+
+
+
+
+
+
+
