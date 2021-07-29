@@ -1,17 +1,17 @@
 
 //to import named exports we use {}
 
-import TS, {multiply, multiplyByTwo} from "./i.Modules/multiply";
+import TS, {multiply, multiplyByTwo} from "./1.Modules/multiply";
 
 //to import all exports
-import * as multiplyModule from './i.Modules/multiply';
+import * as multiplyModule from './1.Modules/multiply';
 
 
 // alias for named exports
-import  { multiplyByTwo as mulBy2 } from "./i.Modules/multiply";
+import  { multiplyByTwo as mulBy2 } from "./1.Modules/multiply";
 
 //import ts interface
-import  { HelloWorld }  from "./i.Modules/multiply";
+import  { HelloWorld }  from "./1.Modules/multiply";
 
 const a = 4;
 const b = 3;
